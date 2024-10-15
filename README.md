@@ -1,30 +1,51 @@
-# CocKleBurs-DevelopmentKit
+# CocKleBurs Development Kit
 
-AAA级框架使用这个框架，你不需要担心去增加任何插件，任何扩展包就可以立马编写你自己的游戏
+CocKleBurs (CKB) 是一个 AAA 级的 Unity 框架，旨在无缝游戏开发，无需额外的插件或扩展。它支持各种游戏类型，包括在线游戏、买断制游戏、移动游戏和独立游戏，适用于多个平台。该框架持续更新，以与最新的 Unity 技术和实践保持一致，借鉴了 GF、ET 和 CF 等现有框架的经验。
 
-让您使用CocKleBurs GameFrameWork的理由：
-1.总览
-CKB里面一共包含23个完全模块化系（目前还在增加） 包括过场动画 动画 流程 更新流程  UI  启动项 状态机 AI行为树  粒子特效 声音  本地化 事件（无需注册和注销 0GC） 资源管理 （Addressables，AssetBundle）引用 Buff Ban 文件系统 等等
+## Key Features / 主要特点
 
-还有不同选择的保存方式  JSON  PlayerData  SteamWorks  XML
+### 1. Comprehensive Modules / 综合模块
+CKB 包含 **23 个模块化系统**（未来还会增加），提供各个领域的功能：
 
-1.1简单的API
-CKB与其他GameFrameWork不同 CKB从设计上就采用了全部系统模块化 所以你完全可以把里面的系统提取出来 只有一个“Game”它作为整个框架的核心 并且API简单直白 不带任何“奇怪”的前缀
+- **Transitions and Animations / 过场动画和动画**: 高效管理动画和过场。
+- **State Machines / 状态机**: 轻松实现复杂的游戏状态逻辑。
+- **AI Behavior Trees / AI 行为树**: 创建智能 NPC 的行为树。
+- **UI Management / UI 管理**: 简化用户界面处理。
+- **Resource Management / 资源管理**: 使用 Addressables 和 AssetBundles。
+- **Localization / 本地化**: 支持多种语言。
+- **Hot Code Updates / 热更新代码**: 无需重启即可更新代码。
+- **Database Support / 数据库支持**: 与各种数据库系统集成。
+- **File Systems / 文件系统**: 管理不同保存方法的文件（JSON、PlayerData、SteamWorks、XML）。
 
-2.架构方式
-CKB采用的是类似UE引擎的GamePlay架构方式，所以它能用于任何游戏类型 通过与CKB相同的命名和编写规则 你会获得 “干净”的代码 “便利”的Debug
+### 2. Simplified API / 简单的 API
+CKB 采用简单明了的 API，允许用户轻松提取模块。核心组件“Game”作为框架的主要枢纽。API 设计简单直观，避免不必要的前缀。
 
-支持多人游戏开发基于FishNet 并且封装了各种FishNet访问方式 自带一个OnInput 你可以定义一个输入结构体 改变的时候他会自动发送 无需RPC
+### 3. Architecture / 架构
+CKB 采用类似 Unreal Engine 的 **GamePlay 架构**，使其适用于任何游戏类型。通过遵循一致的命名约定和编码标准，开发人员可以实现清晰的代码和方便的调试。
 
-3.优势
-3.1 团队协作
-CKB包含一些帮助组件 包括注释组件 简单的版本控制 还有依赖于Notion 你可以快速打开文档 你可以看到协作时 其他成员能看到留言更加直接
+### 4. Multiplayer Support / 多人游戏支持
+CKB 支持基于 **FishNet** 的多人游戏开发，封装访问方法并集成 OnInput 系统。输入变化时会自动发送更新，无需 RPC。
 
-未来可能还有内置Bug反馈 玩家可以提交Bug或者是留言 评价 返回到Notion 
+## Advantages / 优势
 
-3.2优化
-其他的网络框架都不在意优化 CKB即插即用 声音系统 粒子特效系统  都经过池化 和异步并且所有SO由一个单例控制(Addressables) 并且他们都用一个CKB面板配置所有东西信息  无论是网络还是单机 CKB内置自己的全流程更详细的更新方式 完全替代Unity
+### 1. Team Collaboration / 团队协作
+- **Documentation Integration / 文档集成**: 内置对 Notion 的支持，便于快速访问项目文档。
+- **Commenting Features / 评论功能**: 团队成员可以留下评论，以更好地协作。
+- **Future Bug Reporting / 未来的 Bug 报告**: 可能集成 Bug 反馈和玩家评论。
 
-3.3Steamwork
-VoiceChat SteamRelayServer SteamFriend Chat  开箱即用 作者：蒼浪子 https://www.bilibili.com/read/cv39263083/?spm_id_from=333.999.0.0&jump_opus=1 出处：bilibili
-![BackgroundLogo](https://github.com/user-attachments/assets/db75f238-66bb-4ece-a087-49a319631422)
+### 2. Performance Optimization / 性能优化
+- **Pooling Systems / 池化系统**: 实现声音和粒子系统的池化，以增强性能。
+- **Asynchronous Operations / 异步操作**: 针对网络和单机游戏优化流程。
+- **Unified Control / 统一控制**: 单实例管理所有 SO（Scriptable Objects），简化资源管理。
+
+### 3. SteamWorks Integration / SteamWorks 集成
+- **Out-of-the-Box Features / 开箱即用的功能**: 包含语音聊天、Steam 继承服务器和好友聊天等功能。
+
+![Background Logo](https://github.com/user-attachments/assets/db75f238-66bb-4ece-a087-49a319631422)
+
+## Getting Started / 开始使用
+Follow these steps to integrate the CocKleBurs Development Kit into your Unity project:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/CocKleBurs-DevelopmentKit.git
