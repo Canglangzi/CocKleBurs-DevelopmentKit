@@ -78,7 +78,7 @@ The design concepts are inspired by frameworks I have used, such as GF, ET, and 
 
 ### 1. Overview
 
-CKB contains a total of 23 fully modular systems (and this number is still increasing), including:
+📝CKB contains a total of 23 fully modular systems (and this number is still increasing), including:
 
 - Cutscene animations
 - Animations
